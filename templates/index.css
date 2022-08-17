@@ -39,7 +39,8 @@ body
     position: absolute;
 
     left:50%;
-    transform: translateX(-50%) translateY(-50%) ;
+    top: -150px;
+    transform: translateX(-50%) /* translateY(-50%) */ ;
     width:264px;
     height: 225px;
     border-radius: 20%;
@@ -57,6 +58,7 @@ body
 }
 .imgMe:hover
 {
+    top: -220px;
     width:528px;
     height: 450px;
     border-radius: 5%;
@@ -79,11 +81,17 @@ body
     width: 100%;
     transform: 0.5s;
     transform: translateY(150px);
-    transition: 1s;
+    transition: 0.5s;
+    background: rgba(153, 153, 153, 0);
+    border-radius: 100px;
+    
 }
 .card:hover .contentCard .details{
     transform: translateY(0);
+    background:  rgba(187, 187, 187, 1);
 }
+
+
 
 .card .contentCard .details h1{
     font-size:2.25em;
@@ -102,6 +110,13 @@ body
     flex-direction: column;
     justify-content:space-between;
     margin: 20px 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.card:hover .contentCard .details .data {
+    opacity: 1;
+    
 }
 
 .card .contentCard .details .data h3{
