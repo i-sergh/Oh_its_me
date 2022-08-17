@@ -1,1 +1,10 @@
-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
+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
+
+
+https://github.com/i-sergh/Oh_its_me.git
+
+https://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@github.com/i-sergh/Oh_its_me.git
+
+
+
+git remote add origin https://i-sergh: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@github.com/i-sergh/Oh_its_me.git
