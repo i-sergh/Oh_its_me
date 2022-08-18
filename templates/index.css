@@ -23,7 +23,7 @@ body
 }
 .card{
     position: relative;
-    width: 550px;
+    min-width: 550px;
     height: 250px;
     /* height: 450px; */
     background: #999;
@@ -149,6 +149,7 @@ body
     margin-top: 10px;
     margin-bottom: 10px;
     align-items: center;
+    border-bottom-left-radius: 50px;
 }
 
 .contentDark .content {
@@ -164,6 +165,7 @@ body
     margin-left: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-bottom-right-radius: 50px;
 }
 
 .contentLight .content {
