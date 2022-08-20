@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="pindex.css">
+    <link rel="stylesheet" type="text/css" href="hpindex.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pralax test</title>
+</head>
+<body>
+    <div class="parallax_wrapper">
+        <div class="parallax_group intro_screen" id="intro">
+            My parallax!! А это русский
+        </div>
+
+        <div class="parallax_group" id="group-1">
+            <div class="parallax_layer base_layer">
+                Awesome base
+            </div>
+            <div class="parallax_layer mid_layer">
+                Nice mid
+            </div>
+        </div>
+        <div class="parallax_group" id="group-2">
+            <div class="parallax_layer mid_layer">
+                Nice mid
+            </div>
+            <div class="parallax_layer top_layer">
+                Ok top
+            </div>
+        </div>
+
+        <div class="parallax_group outro_screen" id="outro">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="slide" id="h0">
+                        <div class="layer back"></div>
+                        <div class="layer mid"></div>
+                        <div class="layer top">
+                            <a href="#h1">SILHOUETTE
+                                <span>SCYLINE</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide" id="h1">
+                        <div class="layer back"></div>
+                        <div class="layer mid"></div>
+                        <div class="layer top">
+                            <a href="#h0">SILHOUETTE
+                                <span>SCYLINE</span>
+                            </a>
+                        </div>
+                    </div>
+                   <!--  <div class="slide">
+                        
+                    </div> -->
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script type="text/javascript">
+        let cont = document.querySelector('.container');
+        let layer = document.querySelectorAll('.layer');
+
+        cont.onscroll = function(){
+            let X = cont.scrollTop;
+
+            layer[0].style.left = X/10 + 'px';
+            layer[1].style.left = X/20 + 'px';
+        }
+    </script>
+</body>
+</html> 
