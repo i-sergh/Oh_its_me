@@ -30,9 +30,9 @@
     transform: rotate(-90deg)translateX(-100vh);
     transform-origin: top left;
     position: absolute;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: scroll;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* это делает плавный скролл по ссылке */
 }
 
 .layer{
