@@ -1,3 +1,8 @@
 https://sebastianvoelkl.com/contact/
 
 http://scrollmagic.io/
+
+https://fontawesome.com/icons
+
+
+https://ionic.io/ionicons
