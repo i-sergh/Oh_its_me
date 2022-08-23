@@ -16,182 +16,32 @@ body
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    background: #ccc;
+    /* background: #ccc; */
 }
 
-.mainView{
+.page{
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh ;
-
-}
-/* .containerCard{
     
-    height: 80vh ;
-} */
-.card{
-    position: relative;
-    width: 550px;
-    height: 250px;
-    /* height: 450px; */
-    background: #999;
-    border-radius: 50px;
-    box-shadow: 0 35px 80px rgba(0,0,0,0.2);
-    transition: 1s;
-    margin-top: 25vh;
+    background-color: #ccc;
 }
-.card:hover
-{
-    height: 450px;
-    background:  #bbb;
+#main_view{
+    height: 120vh ;
 }
 
-.imgMe
-{
-    position: absolute;
-
-    left:50%;
-    top: -150px;
-    transform: translateX(-50%) /* translateY(-50%) */ ;
-    width:264px;
-    height: 225px;
-    border-radius: 20%;
-    overflow: hidden;
-    transition: 0.5s;
+#about_me{
+    padding-top: 100px;;
 }
-
-.imgMe img
-{   
-    position: relative;
-    
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.imgMe:hover
-{
-    top: -220px;
-    width:528px;
-    height: 450px;
-    border-radius: 5%;
-}
-/* .card:hover .imgMe{
-    top: -220px;
-    width:528px;
-    height: 450px;
-    border-radius: 5%;
-} */
-.card .contentCard{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display:flex;
-    justify-content: center;
-    align-items: flex-end;
-    overflow: hidden;
-    
-}
-
-.card .contentCard .details{
-    padding:10px;
-    text-align: center;
-    width: 100%;
-    transform: 0.5s;
-    transform: translateY(150px);
-    transition: 0.5s;
-    background: rgba(153, 153, 153, 0);
-    border-radius: 100px;
-    
-}
-.card:hover .contentCard .details{
-    transform: translateY(0);
-    background:  rgba(187, 187, 187, 1);
-}
-
-
-
-.card .contentCard .details h1{
-    font-size:2.25em;
-    font-weight: 600;
-    color: #444;
-    line-height: 1.2em; 
-
-}
-.card .contentCard .details h1 span {
-    font-size: 0.75em;
-    font-weight: 500;
-}
-
-.card .contentCard .details .data{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    margin: 20px 0;
-    opacity: 0;
-    transition: 1s;
-}
-
-.card:hover .contentCard .details .data {
-    opacity: 1;
-    
-}
-
-.card .contentCard .details .data h3{
-    font-size: 1.5em;
-    color: #555;
-    line-height: 1.2em;
-    font-weight: 600;
-    margin: 5px 0;
-}
-
- .card .contentCard .details .data h3 span{
-    color: #444;
-    
-
-} 
-
-
-.containerMedia{
-    position:relative;
-    display: flex;
-    
-    margin-top: 10vh;
-    height: 20vh;
-}
-
-
-ion-icon {
-
-    margin-left: 40px;
-    margin-right: 40px;
-    font-size: 52px;
-    transition: 0.5s;
-
-  }
-
-ion-icon:hover  {
-    margin-left: 0px;
-    margin-right: 0px;
-    font-size: 86px;
-  }
- 
 /* 
 ###################### */
 
-.lineWindow{
-    width: 100vw;
-    height: 30vh;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-    transform-style: preserve-3d;
-    background: tomato;
-}
-.parallaxBackLayer{
-    transform: translateZ(210px) scale(0.3) ;
-}
+
+
+
+
 
 /* ####################### */
 .contentDark{
