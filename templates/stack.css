@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;900&display=swap');
+
+
+.tech {
+    display:flex;
+    background-color:brown;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    padding-inline:30px;
+    border-radius: 30px;
+    margin-inline: 10px;
+    width:fit-content;
+    margin: 10px;
+}
+
+.tech img {
+    margin-right: 10px;
+    width: 1.5em;
+    filter: grayscale(1);
+    
+}
+.tech p{
+    font-size: 1.2em;
+    font-family: 'Poppins' ;
+    font-weight: 900;
+    width:max-content;
+    
+}
+
+#stack-python{
+    background-color:rgb(212, 226, 88);/* rgb(236, 235, 160); */
+}
+#stack-django{
+    background-color: rgb(178, 207, 161);/* rgb(175, 235, 141); */
+}
+
+#stack-opencv{
+    background-color:rgb(178, 207, 161);
+}
+#stack-numpy{
+    background-color:rgb(125, 153, 214);
+}
+#stack-pandas{
+    background-color:rgb(178, 207, 161);
+}
+#stack-matplotlib{
+    background-color: rgb(190, 143, 218)  /* rgb(231, 200, 114) */;
+
+}
+#stack-jupyter-notebook{
+    background-color: rgb(190, 143, 218) /* rgb(231, 200, 114) */;
+
+}
+
+
+.stack_content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    width:100%;
+    /* background-color: blueviolet; */ 
+    
+    
+}
+.stack_line{
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 10px;
+    
+    
+}

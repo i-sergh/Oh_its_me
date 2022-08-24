@@ -8,8 +8,9 @@
 
 
 .line_window{
-    
+    display: flex;
     overflow-y:auto;
+    
     position:relative;
     display: flex;
     width: 100vw;
