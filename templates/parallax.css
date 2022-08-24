@@ -1,7 +1,7 @@
 .wrapper{
     height: 100vh;
     overflow-x: hidden;
-    /* overflow-y: auto; */
+     overflow-y: auto; 
     perspective: 300px;
 
 }
@@ -30,11 +30,13 @@
     justify-content: center;
     align-items: left;
     color: greenyellow;
+    
 }
 
 .back_layer{
     z-index: -1;
-    background-color: black;
+    height:200vh;
+ /*    background-color: aquamarine; */
     display: flex;
     flex-direction: column;
     transform: translateZ(-300px) scale(3);
