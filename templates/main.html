@@ -11,6 +11,13 @@
 <body>
     <a href="/"><h2>home</h2></a>
     <a href="/random"><h2>room</h2></a>
+    
+    <form method="GET"  action="{% url 'home' %}">
+        <input type="text" name="q" placeholder="Search rooms...">
+
+        
+    </form>
+
     <hr width="80%">
     {% block content %}
 
