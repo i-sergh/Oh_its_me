@@ -1,4 +1,5 @@
 #from email import message
+from email import message
 from django.http import HttpResponse
 
 from django.shortcuts import render, redirect
@@ -13,7 +14,7 @@ from django.db.models import Q
 
 from random import choice
 
-from .models import Room, Topic
+from .models import Room, Topic, Message
 from .forms import RoomForm
 """ rooms = [
     {'id':0, 'name':'rrr'},
@@ -35,13 +36,27 @@ def home(request):
                 # works faster
     room_count = rooms.count()
 
-    context={'rooms':rooms, 'topics': topics, 'room_count':room_count}
+    activity_comments = Message.objects.filter(
+        Q(room__topic__name__icontains=q)
+    )
+
+    context={'rooms':rooms, 'topics': topics, 'room_count':room_count, 'activity_comments':activity_comments}
     return render(request, 'base/home.html',context )
 
 def room(request, pk):
     room = Room.objects.get(id=pk)
-    context={'room': room  }
-    print(context)
+                # gets set of child Message
+    comments = room.message_set.all()
+    participants = room.participants.all()
+    if request.method =='POST':
+        new_comment = Message.objects.create(
+            user=request.user,
+            room=room,
+            body=request.POST.get('body')
+        )
+        room.participants.add(request.user)
+        return redirect('room', pk=room.id)
+    context={'room': room, 'comments':comments,'participants':participants }
     return render(request, 'base/room.html', context)
 
 def random_room(request):
@@ -53,13 +68,28 @@ def random_room(request):
     
     return redirect('room', roomid)
 
+
+
+def user_profile(request, pk):
+
+    user = User.objects.get(id=pk)
+
+    rooms = user.room_set.all()
+    comments = user.message_set.all()
+    topics = Topic.objects.all()
+    context = {'user':user, 'rooms':rooms,'comments':comments, 'topics':topics}
+    return render(request, 'base/profile.html',context)
+
+
 @login_required(login_url='login')
 def create_room(request):
     form = RoomForm()
     if request.method == "POST":
         form = RoomForm(request.POST)
         if form.is_valid():
-            form.save()
+            room = form.save(commit=False)
+            room.host = request.user
+            room.save()
             return(redirect(home))
     context={'form':form}
     return render(request, 'base/room_form.html', context)
@@ -92,6 +122,18 @@ def delete_room (request, pk):
         room.delete()
         return redirect('home')
     return render(request, 'base/delete.html', {'obg':room})
+
+@login_required(login_url='login')
+def delete_comment (request, pk):
+    comment = Message.objects.get(id=pk)
+
+    if request.user != comment.user:
+        return HttpResponse('<h1>Go away!</h1>')
+    
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('home')
+    return render(request, 'base/delete.html', {'obg':comment})
 
 
 def login_user(request):

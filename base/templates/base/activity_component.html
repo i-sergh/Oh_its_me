@@ -1,0 +1,20 @@
+
+
+<h3>Resent Activity</h3>
+<hr>
+{% for comment in activity_comments %}
+<div>
+    <small> 
+        <a href="{% url 'user-profile'  comment.user.id %}" >@{{comment.user}}</a> 
+        {{comment.created|timesince}}
+        
+    </small>
+    <small>in "{{comment.room}}"</small>
+
+    <p>{{comment.body}}</p>
+    {% if request.user == comment.user %}
+        <a href="{% url 'delete-comment' comment.id %}">Delete</a>
+    {% endif %}
+</div>
+<hr>
+{% endfor %}

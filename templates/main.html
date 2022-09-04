@@ -1,23 +1,27 @@
+
+
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'styles/main.css' %}">
     
 </head>
 <body>
-    <a href="/"><h2>home</h2></a>
-    <a href="/random"><h2>room</h2></a>
+    <a href="/"><h2>Home</h2></a>
+    <a href="/random"><h2>Random room</h2></a>
     
     <form method="GET"  action="{% url 'home' %}">
         <input type="text" name="q" placeholder="Search rooms...">
     </form>
     
     {% if request.user.is_authenticated %}
-    <h4>@{{request.user.username}}</h4>
+    <img src="{%static 'images/logo-git.png' %}" width="50vw" height="50vh" >
+    <h4><a href="{% url 'user-profile' request.user.id %}">@{{request.user.username}}</h4>
     <a href="{% url 'logout' %}">Logout</a>
     {% else %}
     <a href="{% url 'login' %}">Login</a>
