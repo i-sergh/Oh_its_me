@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;900&display=swap');
+
+
+.tech {
+    display:flex;
+    background-color:brown;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    padding-inline:30px;
+    border-radius: 30px;
+    margin-inline: 10px;
+    width:fit-content;
+    margin: 10px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.2);
+    transition: 1.5s;
+    
+}
+
+.tech img {
+    margin-right: 10px;
+    width: 1.5em;
+    filter: grayscale(1);
+    
+}
+.tech p{
+    font-size: 1.2em;
+    font-family: 'Poppins' ;
+    font-weight: 900;
+    width:max-content;
+    
+    
+}
+
+#stack-python{
+    /* box-shadow: 20px 10px 50px rgba(255, 255, 255, 0.5); */
+    background-color:rgb(225, 205, 60);/* rgb(236, 235, 160); */
+}
+
+#stack-django{
+    background-color: rgb(43, 169, 119);/* rgb(175, 235, 141); */
+}
+
+#stack-opencv{
+    background-color:rgb(178, 207, 161);
+}
+#stack-numpy{
+    background-color:rgb(77, 119, 207);
+}
+#stack-pandas{
+    background-color:rgb(231, 129, 189);
+}
+#stack-matplotlib{
+    background-color: rgb(190, 143, 218);  /* rgb(231, 200, 114) */;
+
+}
+#stack-jupyter-notebook{
+    background-color: rgb(243, 119, 38); /* rgb(231, 200, 114) */;
+
+}
+#stack-kivy{
+    background-color: rgb(180,180,180);
+}
+
+#stack-pydicom{
+    background-color:rgb(225, 205, 60);
+}
+
+#stack-linux{
+    background-color:rgb(233, 85, 14);
+}
+
+#stack-git{
+    background-color:rgb(240, 81, 51);
+}
+#stack-docker{
+    background-color: rgb(77, 171, 207);
+}
+
+
+
+
+.stack_content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    width:100%;
+    /* background-color: blueviolet; */ 
+    
+    
+}
+.stack_line{
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 10px;
+    
+    
+}

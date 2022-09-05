@@ -1,0 +1,47 @@
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+     overflow-y: auto; 
+    perspective: 300px;
+
+}
+
+
+.line_window{
+    display: flex;
+    overflow-y:auto;
+    
+    position:relative;
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    /* margin-top: 20vh; */
+    /* margin-bottom: 20vh; */
+    transform-style: preserve-3d;
+   /* background: tomato;  */
+    justify-content: center;
+    align-items: center;
+    perspective: 300px;
+
+}
+.parallax_layer{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    color: greenyellow;
+    
+}
+
+.back_layer{
+    z-index: -1;
+    height:200vh;
+ /*    background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(-300px) scale(3);
+    width: 100%;
+    
+    
+}

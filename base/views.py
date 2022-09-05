@@ -180,3 +180,9 @@ def register_user(request):
             messages.error(request, " registration error ")
 
     return render(request, 'base/login_register.html', {'form':form})
+
+
+
+   
+def face_site(request):
+    return render(request, 'index.html')

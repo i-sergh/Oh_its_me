@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'face_site/styles/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'face_site/styles/card.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'face_site/styles/parallax.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'face_site/styles/stack.css' %}">
+  
+    <title>About me</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page" id="main_view">
+            <div class="containerCard">
+                <div class="card">
+                    <div class="imgMe">
+                        <img src="{% static 'face_site/images/me.png' %}" alt="its a me mario"> 
+
+
+                    </div>  
+
+
+                    <div class="card_menu">
+                        
+                    </div>  
+
+                    <div class="contentCard"> 
+                        
+                        <div class="details">
+                            <h1>Ипполитов Сергей<br>
+                                <span>Python Junior Developer</span>
+                            </h1>
+                            <div class="data">
+                                <h3></h3>
+                                <h3></h3>
+                                <h3></h3>
+                                <h3></h3>
+                                <h3>Программирование - это <span>Магия,</span></h3> 
+
+                                <h3>а я нужный Вам <span>волшебник</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerMedia">
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <ion-icon name="logo-github"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+            </div>
+        </div>
+
+        <div class="line_window">
+            <div class="parallax_layer back_layer">
+                        <!-- TODO
+                Вывести на отдельном элементе
+                 посмотреть, что происходит -->
+                <p>if __name__ == "__main__":</p>
+
+                <p>    WINDOW_WIDTH = 600</p>
+                <p>    WINDOW_HEIGHT = 600</p>
+                <p>    cnv = np.zeros( (WINDOW_HEIGHT, WINDOW_WIDTH, 3),</p>
+                <p>                dtype=np.uint8() )</p>
+                <p>    for_mouse = np.zeros( (WINDOW_HEIGHT, WINDOW_WIDTH, 3),</p>
+                <p>                dtype=np.uint8() )</p>
+
+
+                <p>    n = []</p>
+                <p>    for x in range(60, WINDOW_WIDTH-30, 60):</p>
+                <p>        for y in range(60, WINDOW_HEIGHT-30, 60):  </p>
+                <p>            n.append(</p>
+                <p>                Cross(cnv, x, y,</p>
+                <p>            randint(0,1), randint(0,1), randint(0,1), randint(0,1),</p>
+                <p>            randint(0,1), randint(0,1), randint(0,1), randint(0,1), </p>
+                <p>            randint(0,1), randint(0,1), randint(0,1), randint(0,1)</p>
+              
+                <p>            n[-1].draw()</p>
+                <p>            if len(n) % 2 == 0:</p>
+                <p>                n[-1].destroy()    </p>
+                    
+                <p>    #cv2.ellipse(cnv, (330,330), (30,30), 0,  0, -90, (0, 0,255), 4)</p>
+                <p>   #cv2.ellipse(cnv, (330,330), (30,30), 0,  225, 270, (250, 200,30), 4)</p>
+
+                    
+                <p>    cv2.namedWindow('TRAINS')</p>
+                <p>    #cv2.setMouseCallback('TRAINS', set_cross)</p>
+                <p>    #cv2.setMouseCallback('TRAINS', d.set_cross)</p>
+                <p>    while True:</p>
+                <p>        cv2.imshow('TRAINS', cnv)</p>
+                <p>        key = cv2.waitKey(1)</p>
+                <p>        if key == 27:</p>
+                <p>            break</p>
+                <p>    cv2.destroyAllWindows()</p>
+
+            </div>
+            <div class="parallax_layer mid_layer">
+                /тут должен быть красивый код :р/
+            </div>
+        </div>
+
+        <div class="page" id="about_me">
+            <div class="contentDark" id="1">
+                <div class="content">
+                    <h1> Профессиональные интересы </h1>
+                    <p>Молодой начинающий разработчик.
+
+                    </p>
+                    <p>
+                        Обожаю визуализацию и люблю решать проблемы с ней связанные. 
+                    </p>
+                    <p>
+                        Не страшусь сложных задач. Стремлюсь доводить их выполнение до конца. 
+                    </p>
+                    <p>Постоянно изучаю новые технологии.</p> 
+                    <p>Вдохновляет создание собственных миров.</p>
+                    <p>Регулярно участвую в тематических конференциях и выставках, представляя программные продукты (в основном свои)</p>
+                    <p>Общителен, легко вливаюсь в коллектив.</p>
+                    <p>Признаю и прислушиваюсь к конструктивной критике.</p>
+                    <p>Готов помочь в трудную минуту.</p>
+
+                </div>
+            </div>
+            
+            <div class="contentLight"  >
+                <div class="content">
+                    
+                    <h1> Стек </h1>
+                    <div class="stack_content">
+                        <div class="stack_line">
+                            <div class="tech" id="stack-python">
+                                
+                                <img src="{% static 'face_site/logos/logo-python.svg' %}">
+                                <p>Python</p>
+                            </div>
+                            
+                            <div class="tech" id="stack-django">
+                                <img src="{% static 'face_site/logos/logo-django.png' %}">
+                                <p>Django</p>
+                            </div>
+                        </div>
+                        <div class="stack_line">
+                            <div class="tech" id="stack-opencv">
+                                <img src="{% static 'face_site/logos/logo-opencv.svg' %}">
+                                <p>openCV-python</p>
+                            </div>
+                            
+                            <div class="tech" id="stack-numpy">
+                                <img src="{% static 'face_site/logos/logo-numpy.png' %}">
+                                <p>Numpy</p>
+                            </div>
+                            
+                            <div class="tech" id="stack-pandas">
+                                <img src="{% static 'face_site/logos/logo-pandas.png' %}">
+                                <p>Pandas</p>
+                            </div>
+                        
+                            <div class="tech" id="stack-matplotlib">
+                                <img src="{% static 'face_site/logos/logo-matplotlib.svg' %}">
+                                <p>Matplotlib</p>
+                            </div>
+                            
+                            <div class="tech" id="stack-jupyter-notebook">
+                                <img src="{% static 'face_site/logos/logo-jupyter.png' %}">
+                                <p>Jupyter notebook</p>
+                            </div>
+        
+                        </div>
+
+                        <div class="stack_line">
+                            <div class="tech" id="stack-kivy">
+                                <img src="{% static 'face_site/logos/logo-kivy.png' %}">
+                                <p>Kivy</p>
+                            </div>
+                            <div class="tech" id="stack-pydicom">
+                                <img src="{% static 'face_site/logos/logo-pydicom.png' %}">
+                                <p>Pydicom</p>
+                            </div>
+                        </div>
+
+                        <div class="stack_line">
+                            <div class="tech" id="stack-linux">
+                                <img src="{% static 'face_site/logos/logo-linux.png' %}">
+                                <p>Linux</p>
+                            </div> 
+                            <div class="tech" id="stack-git">
+                                <img src="{% static 'face_site/logos/logo-git.png' %}">
+                                <p>Git</p>
+                            </div>
+                            <div class="tech" id="stack-docker">
+                                <img src="{% static 'face_site/logos/logo-docker.svg' %}">
+                                <p>Docker</p>
+                            </div>   
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="contentDark">
+                <div class="content">
+                    <h1> Я МОГУ </h1>
+                    <p> Сделать этот прекрасный блок для временного заполнения текста, который в будующем точно надо заменить на какой-то осмысленный красивый вдохновенный текст и возможно добавить картинку </p>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+Bащет, меня сдесь быть не должно
+</body>
+</html>
+
