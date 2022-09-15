@@ -2,3 +2,10 @@ __pycache__
 db.sqlite3
 geckodriver.log
 *.pyc
+migrations
+*.swo
+*.swp
+*.swn
+secret_key.txt
+
+
