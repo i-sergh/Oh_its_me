@@ -7,5 +7,5 @@ migrations
 *.swp
 *.swn
 secret_key.txt
-
+.vscode
 
